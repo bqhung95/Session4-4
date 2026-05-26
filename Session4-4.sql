@@ -26,7 +26,8 @@ VALUES ('Chuột không dây Logitech M170','Phụ kiện','300000','20','Logite
 
 --- 2. Tăng giá tất cả sản phẩm lên 10%
 UPDATE Table_Product.TBProducts
-SET price = price * 0.1;
+SET price = price * 1.10
+WHERE manufacturer = 'Apple';
 
 --- 3. Xóa sản phẩm có stock = 0
 DELETE FROM Table_Product.TBProducts WHERE stock = 0;
